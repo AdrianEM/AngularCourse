@@ -1,0 +1,46 @@
+
+        <div class="row">
+            <table class="table table-bordered">
+                <colgroup span="7"></colgroup>
+
+                <tbody>
+                    <tr>
+                        <th scope="col" title="Id">Id</th>
+                        <th scope="col" title="FirstName">First Name</th>
+                        <th scope="col" title="LastName">LastName</th>
+                        <th scope="col" title="Email">Email</th>
+                        <th scope="col" title="Gender">Gender</th>
+                        <th scope="col" title="Ip">Ip</th>
+                        <th scope="col" title="Picture">Picture</th>
+                        <th scope="col" title="Operations">Operations</th>
+                    </tr>
+                    <tr ng-repeat="person in persons">
+                        <td>
+                            {{person.Id}}
+                        </td>
+                        <td>
+                            {{person.FirstName}}
+                        </td>
+                        <td>
+                            {{person.LastName}}
+                        </td>
+                        <td>
+                            {{person.Email}}
+                        </td>
+                        <td>
+                            {{person.Gender}}
+                        </td>
+                        <td>
+                            {{person.Ip}}
+                        </td>
+                        <td>
+                            {{person.Picture}}
+                        </td>
+                        <td>
+                          <span clas="glyphicon glyphicon-edit"></span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
