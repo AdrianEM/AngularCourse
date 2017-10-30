@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="col-md-2">
+
+  </div>
+  <div class="col-md-8">
+    <form name="personForm">      
+        <div class="row">
+          <div class="col-md-6">
+            <label for="nombre">Nombre</label>
+            <input id="nombre" class="form-control" ng-model="addPerson.FirstName" placeholder="Adrian">
+          </div>
+         <div class="col-md-6">
+            <label for="apellidos">Apellidos</label>
+            <input id="apellidos" class="form-control" ng-model="addPerson.LastName" placeholder="Mena Rodriguez">
+          </div>
+          
+          <div class="col-md-6">
+            <label for="picture">Picture</label>
+            <input id="picture" class="form-control" ng-model="addPerson.Picture" placeholder="Picture">
+          </div>
+
+          <div class="col-md-6">
+            <label for="email">Email</label>
+            <input id="email" class="form-control" ng-model="addPerson.Email" placeholder="usuario@dominio">
+          </div>
+           <div class="col-md-6">
+            <label for="gender_">Gender</label>
+            <select class="form-control" id="gender_" ng-options="item as item.Gender for item in Genders track by item.id"
+                    ng-model="addPerson.Gender">  
+            </select> 
+          </div>
+          <div class="col-md-6">
+            <label for="ip">IP</label>
+            <input id="ip" class="form-control" ng-model="addPerson.IP" placeholder="127.0.0.1">        
+          </div>
+        </div>
+        <div class="row" style="margin-top:15px">
+          <div class="col-md-4">
+            <input class="btn btn-success" type="submit" ng-click="newPerson()" value="Guardar">   
+          </div>
+          <div class="col-md-8">
+             <script type="text/ng-template" id="alert.html">
+                <div ng-transclude></div>
+             </script>         
+            <div uib-alert template-url="alert.html" ng-show="addPersonError.exist"  class="alert-warning" >{{addPersonError.msg}}</div>
+          </div>
+        </div>
+     
+    </form>
+  </div>
+  
+</div>

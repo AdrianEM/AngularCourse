@@ -1,46 +1,44 @@
+<div class="row">
+  <table class="table table-bordered">
+    <colgroup span="7"></colgroup>
+    <tbody>
+      <tr>
+        <th scope="col" title="Id">Id</th>
+        <th scope="col" title="FirstName">First Name</th>
+        <th scope="col" title="LastName">LastName</th>
+        <th scope="col" title="Email">Email</th>
+        <th scope="col" title="Gender">Gender</th>
+        <th scope="col" title="Ip">Ip</th>
+        <th scope="col" title="Picture">Picture</th>
+        <th scope="col" title="Operations">Operations</th>
+      </tr>
+      <tbody>
+        <tr dir-paginate="person in persons|filter:search|itemsPerPage:5">
+          <td>{{person.Id}}</td>
+          <td> {{person.FirstName}}</td>
+          <td> {{person.LastName}}</td>
+          <td> {{person.Email}}</td>
+          <td> {{person.Gender}}</td>
+          <td> {{person.Ip}}</td>
+          <td>{{person.Picture}}</td>
+          <td>
+            <a href="#!personEdit/{{person.Id}}">
+                            <i class="glyphicon glyphicon-edit"></i>
+                          </a>
+            <a href="#!personEdit/{{person.Id}}">
+                            <i class="glyphicon glyphicon-trash"></i>
+                          </a>
+          </td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <dir-pagination-controls
+        max-size="5"
+        direction-links="true"
+        boundary-links="true" >
+     </dir-pagination-controls>
+      </tfoot>
 
-        <div class="row">
-            <table class="table table-bordered">
-                <colgroup span="7"></colgroup>
-
-                <tbody>
-                    <tr>
-                        <th scope="col" title="Id">Id</th>
-                        <th scope="col" title="FirstName">First Name</th>
-                        <th scope="col" title="LastName">LastName</th>
-                        <th scope="col" title="Email">Email</th>
-                        <th scope="col" title="Gender">Gender</th>
-                        <th scope="col" title="Ip">Ip</th>
-                        <th scope="col" title="Picture">Picture</th>
-                        <th scope="col" title="Operations">Operations</th>
-                    </tr>
-                    <tr ng-repeat="person in persons">
-                        <td>
-                            {{person.Id}}
-                        </td>
-                        <td>
-                            {{person.FirstName}}
-                        </td>
-                        <td>
-                            {{person.LastName}}
-                        </td>
-                        <td>
-                            {{person.Email}}
-                        </td>
-                        <td>
-                            {{person.Gender}}
-                        </td>
-                        <td>
-                            {{person.Ip}}
-                        </td>
-                        <td>
-                            {{person.Picture}}
-                        </td>
-                        <td>
-                          <span clas="glyphicon glyphicon-edit"></span>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
+    </tbody>
+  </table>
+</div>

@@ -1,1 +1,1 @@
-var app = angular.module("AngularCourse", ["ngRoute"]);
+var app = angular.module("AngularCourse", ["ngRoute", "angularUtils.directives.dirPagination"]);
